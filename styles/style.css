@@ -1,0 +1,329 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f5;
+}
+
+.container {
+  max-width: 2850px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.common {
+  background-color: #ffffff;
+  height: 1768px;
+  margin: 50px auto;
+  padding-top: 114px;
+  padding-bottom: 148px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 116px;
+}
+
+.header_container {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 1250px;
+  height: 119px;
+  display: flex;
+  gap: 68px;
+  align-items: center;
+}
+
+.header h4 {
+  height: 50px;
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 50.4px;
+  text-align: left;
+  color: #18181b;
+}
+
+.checkbox-wrapper .check {
+  --size: 119px;
+
+  position: relative;
+  background: linear-gradient(90deg, black, black);
+  line-height: 0;
+  perspective: 400px;
+  font-size: var(--size);
+}
+
+.checkbox-wrapper .check input[type="checkbox"],
+.checkbox-wrapper .check label,
+.checkbox-wrapper .check label::before,
+.checkbox-wrapper .check label::after,
+.checkbox-wrapper .check {
+  appearance: none;
+  display: inline-block;
+  border-radius: var(--size);
+  border: 0;
+  transition: 0.35s ease-in-out;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.checkbox-wrapper .check label {
+  width: calc(2.2 * var(--size));
+  height: var(--size);
+  background: #d7d7d7;
+  overflow: hidden;
+}
+
+.checkbox-wrapper .check input[type="checkbox"] {
+  position: absolute;
+  z-index: 1;
+  width: calc(0.8 * var(--size));
+  height: calc(0.8 * var(--size));
+  top: calc(0.1 * var(--size));
+  left: calc(0.1 * var(--size));
+  background: linear-gradient(45deg, #dedede, black);
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.3);
+  outline: none;
+  margin: 0;
+}
+
+.checkbox-wrapper .check input[type="checkbox"]:checked {
+  left: calc(1.3 * var(--size));
+}
+
+.checkbox-wrapper .check input[type="checkbox"]:checked + label {
+  background: transparent;
+}
+
+.checkbox-wrapper .check label::before,
+.checkbox-wrapper .check label::after {
+  content: "· ·";
+  position: absolute;
+  overflow: hidden;
+  left: calc(0.15 * var(--size));
+  top: calc(0.5 * var(--size));
+  height: var(--size);
+  letter-spacing: calc(-0.04 * var(--size));
+  color: #9b9b9b;
+  font-family: "Times New Roman", serif;
+  z-index: 2;
+  font-size: calc(0.6 * var(--size));
+  border-radius: 0;
+  transform-origin: 0 0 calc(-0.5 * var(--size));
+  backface-visibility: hidden;
+}
+
+.checkbox-wrapper .check label::after {
+  content: "●";
+  top: calc(0.65 * var(--size));
+  left: calc(0.2 * var(--size));
+  height: calc(0.1 * var(--size));
+  width: calc(0.35 * var(--size));
+  font-size: calc(0.2 * var(--size));
+  transform-origin: 0 0 calc(-0.4 * var(--size));
+}
+
+.checkbox-wrapper .check input[type="checkbox"]:checked + label::before,
+.checkbox-wrapper .check input[type="checkbox"]:checked + label::after {
+  left: calc(1.55 * var(--size));
+  top: calc(0.4 * var(--size));
+  line-height: calc(0.1 * var(--size));
+  transform: rotateY(360deg);
+}
+
+.checkbox-wrapper .check input[type="checkbox"]:checked + label::after {
+  height: calc(0.16 * var(--size));
+  top: calc(0.55 * var(--size));
+  left: calc(1.6 * var(--size));
+  font-size: calc(0.6 * var(--size));
+  line-height: 0;
+}
+
+/* section style */
+.section_container {
+  max-width: 2348px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  width: 2348px;
+  height: 1271px;
+  display: flex;
+}
+
+.block_darkmode {
+  max-width: 1174px;
+  width: 100%;
+  height: 1271px;
+  background-color: #18181b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.block_lightmode {
+  max-width: 1174px;
+  width: 100%;
+  height: 1271px;
+  background-color: #f4f4f5;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark_mode {
+  max-width: 1080px;
+  width: 100%;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  padding: 235px 378px 236px 93px;
+  position: relative;
+}
+
+.light_mode {
+  max-width: 1080px;
+  width: 100%;
+  height: 1080px;
+  display: none;
+  flex-direction: column;
+  padding: 300px 378px 236px 93px;
+  position: relative;
+}
+
+.title {
+  width: 609px;
+  height: 609px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title img {
+  width: 117.64px;
+  position: absolute;
+  top: 345px;
+  left: 476px;
+}
+
+.title h3 {
+  width: 609px;
+  height: 360px;
+  font-family: Poppins;
+  font-size: 86px;
+  font-weight: 600;
+  line-height: 90.3px;
+  text-align: left;
+  color: #f4f4f5;
+  margin-bottom: 48px;
+}
+
+.title p {
+  width: 471px;
+  height: 70px;
+  font-family: Poppins;
+  font-size: 33.59px;
+  font-weight: 400;
+  line-height: 35.27px;
+  text-align: left;
+  color: #d4d4d8;
+  margin-bottom: 48px;
+}
+
+.title button {
+  width: 295px;
+  height: 83px;
+  border-radius: 16px;
+  padding: var(--paddingsm-padding);
+  background-color: #6b21a8;
+  color: #fafafa;
+  font-family: Poppins;
+  font-size: 33.59px;
+  font-weight: 500;
+  line-height: 35.27px;
+  text-align: center;
+}
+
+/* light mode */
+
+.light_mode .title h3 {
+  width: 609px;
+  height: 360px;
+  font-family: Poppins;
+  font-size: 86px;
+  font-weight: 600;
+  line-height: 90.3px;
+  text-align: left;
+  color: #18181b;
+  margin-bottom: 48px;
+}
+
+.light_mode .title p {
+  width: 471px;
+  height: 70px;
+  font-family: Poppins;
+  font-size: 33.59px;
+  font-weight: 400;
+  line-height: 35.27px;
+  text-align: left;
+  color: #3f3f46;
+  margin-bottom: 48px;
+}
+
+.dark_mode .user {
+  width: 832px;
+  height: 832px;
+  position: absolute;
+  top: 280px;
+  left: 368px;
+  z-index: 1;
+}
+
+.dark_mode .background {
+  width: 800.89px;
+  height: 900.89px;
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  rotate: -20.56 deg;
+  z-index: 0;
+}
+
+.light_mode .user {
+  width: 832px;
+  height: 832px;
+  position: absolute;
+  top: 350px;
+  left: 420px;
+  z-index: 1;
+}
+
+.light_mode .background {
+  width: 800.89px;
+  height: 900.89px;
+  position: absolute;
+  top: 270px;
+  left: 350px;
+  rotate: -20.56 deg;
+  z-index: 0;
+}
+
+/* select */
+
+.header .select {
+  width: 180px;
+  height: 50px;
+  border: 5px solid brown;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 30px;
+  background-color: rgb(228, 228, 228);
+}
+
