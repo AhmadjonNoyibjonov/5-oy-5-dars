@@ -38,7 +38,7 @@ body {
   display: flex;
   gap: 68px;
   align-items: center;
-  border: 1px solid gray;
+  margin-left: 700px;
 }
 
 .header h4 {
@@ -102,34 +102,6 @@ body {
 
 .checkbox-wrapper .check input[type="checkbox"]:checked + label {
   background: transparent;
-}
-
-.checkbox-wrapper .check label::before,
-.checkbox-wrapper .check label::after {
-  content: "· ·";
-  position: absolute;
-  overflow: hidden;
-  left: calc(0.15 * var(--size));
-  top: calc(0.5 * var(--size));
-  height: var(--size);
-  letter-spacing: calc(-0.04 * var(--size));
-  color: #9b9b9b;
-  font-family: "Times New Roman", serif;
-  z-index: 2;
-  font-size: calc(0.6 * var(--size));
-  border-radius: 0;
-  transform-origin: 0 0 calc(-0.5 * var(--size));
-  backface-visibility: hidden;
-}
-
-.checkbox-wrapper .check label::after {
-  content: "●";
-  top: calc(0.65 * var(--size));
-  left: calc(0.2 * var(--size));
-  height: calc(0.1 * var(--size));
-  width: calc(0.35 * var(--size));
-  font-size: calc(0.2 * var(--size));
-  transform-origin: 0 0 calc(-0.4 * var(--size));
 }
 
 .checkbox-wrapper .check input[type="checkbox"]:checked + label::before,
@@ -326,6 +298,9 @@ body {
 
 .header_buttons button {
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   font-family: "Poppins";
   cursor: pointer;
