@@ -27,17 +27,18 @@ body {
 }
 
 .header_container {
-  max-width: 1250px;
+  max-width: 1800px;
   width: 100%;
   margin: 0 auto;
 }
 
 .header {
-  width: 1250px;
+  width: 1800px;
   height: 119px;
   display: flex;
   gap: 68px;
   align-items: center;
+  border: 1px solid gray;
 }
 
 .header h4 {
@@ -48,6 +49,7 @@ body {
   line-height: 50.4px;
   text-align: left;
   color: #18181b;
+  margin-right: 100px;
 }
 
 .checkbox-wrapper .check {
@@ -314,16 +316,25 @@ body {
   z-index: 0;
 }
 
-/* select */
-
-.header .select {
-  width: 180px;
-  height: 50px;
-  border: 5px solid brown;
-  border-radius: 10px;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 30px;
-  background-color: rgb(228, 228, 228);
+/* header buttons */
+.header_buttons {
+  width: 450px;
+  height: 40px;
+  display: flex;
+  gap: 20px;
 }
 
+.header_buttons button {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins";
+  cursor: pointer;
+  background-color: rgba(39, 208, 227, 0.5);
+  border: none;
+  border-radius: 8px;
+  transition: all 1.5s;
+}
+
+.header_buttons button:hover {
+  transform: scale(1.2, 1.2);
+}
